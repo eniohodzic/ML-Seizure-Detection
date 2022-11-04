@@ -7,7 +7,14 @@ from featureGroup1 import *
 from featureGroup2 import *
 
 def run_features(signal: pd.DataFrame):
-    
+    """
+    run_features: Runs all feature functions to return 
+
+    Input: Post-processed signal in Pandas DataFrame format
+        Other constants dependent on the features that are 
+
+    Output: List of features to be input into machine learning model 
+    """
     all_features = []
     
     all_features.append(feature1A(signal))
