@@ -21,6 +21,14 @@ def import_data():
                         print("raw data retrieved")
 return raw
 
+    # sample_data_folder = mne.datasets.sample.data_path()
+    # sample_data_raw_file = (sample_data_folder / 'MEG' / 'sample' /
+    #                         'sample_audvis_filt-0-40_raw.fif')
+    # raw = mne.io.read_raw_fif(sample_data_raw_file)
+
+    print('Importing datasets')
+    pass
+    # return raw
 
 
 def preprocessing_filter(raw):
@@ -31,9 +39,10 @@ def preprocessing_filter(raw):
     # ica.fit(raw)
     # ica.exclude = [1, 2]  # exclude some of the traces
     # ica.plot_properties(raw, picks=ica.exclude)
-    print("preprocessing filter execute")
 
-    return filtered_datasets
+    print('Filtering channels')
+    pass
+    #return filtered_datasets
 
 
 def preprocessing_remove_channel(filtered_datasets):
@@ -50,5 +59,6 @@ def preprocessing_remove_channel(filtered_datasets):
     # ica.exclude = [1, 2]  # exclude some of the traces
     # ica.plot_properties(raw, picks=ica.exclude)
 
-
-    return remaining_channels
+    print('Removing channels')
+    pass
+    #return remaining_channels

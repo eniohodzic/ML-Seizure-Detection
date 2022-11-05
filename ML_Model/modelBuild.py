@@ -20,6 +20,8 @@ def formatData(features, signal):
 
     feats = []
     labs = []
+
+    print('Formating features')
     return feats, labs
 
 
@@ -32,9 +34,11 @@ def splitData(X, y):
     Output: arrays of training and testing data
     """
 
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2)
+    # X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2)
 
-    return X_train, X_test, y_train, y_test
+    print('Splitting data')
+    pass
+    # return X_train, X_test, y_train, y_test
 
 
 def chooseModel():
@@ -47,7 +51,7 @@ def chooseModel():
     
     """
 
-
+    print('Returning all models')
     return {}
 
 
@@ -61,5 +65,6 @@ def checkModel():
 
     """
 
+    print('Selecting best model')
     return None
 

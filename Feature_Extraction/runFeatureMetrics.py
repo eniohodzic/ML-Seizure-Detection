@@ -3,8 +3,8 @@ This functions serves as high level to run all feature functions and output a da
 """
 
 import pandas as pd
-from featureGroup1 import *
-from featureGroup2 import *
+from .featureGroup1 import *
+from .featureGroup2 import *
 
 def run_features(signal: pd.DataFrame):
 
@@ -16,5 +16,6 @@ def run_features(signal: pd.DataFrame):
     all_features.append(feature2A(signal))
     all_features.append(feature2B(signal))
     all_features.append(feature2X(signal))
-    print("feature run complete")
+
+    print('Calculated all features')
     return all_features
