@@ -4,9 +4,20 @@ import mne
 import matplotlib.pyplot as plt
 
 #test import:
+error = 0
 raw_test = import_data()
 #tests for if raw data was properly imported
+#if (raw_test == false):
+    #print(error code)
+    #error +=1
 filter_test = preprocessing_filter(raw_test)
 #tests for if data was properly filtered
+#if(filter_test == false):
+    #print(error code)
+    #error +=1
 removed_test = preprocessing_remove_channel(removed_test)
-#tests for if channels were removed 
+#tests for if channels were removed
+#if(removed_test == false):
+    #print(error code)
+    #error +=1
+return 0
