@@ -39,7 +39,7 @@ def splitData(X, y):
     return X_train, X_test, y_train, y_test
 
 
-def chooseModel():
+def chooseModel(data_array):
     """
     Try and build different models to fit the data to. Evaluate each model with cross-validation to determine which model is best suited for EEG detection
 
@@ -53,7 +53,7 @@ def chooseModel():
     return {}
 
 
-def checkModel():
+def checkModel(data_array, chosen_model):
     """
     Test the chosen model's performance from chooseModel() in the testing data
 

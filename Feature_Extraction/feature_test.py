@@ -1,8 +1,9 @@
 from featureGroup1 import *
 from featureGroup2 import *
 from runFeatureMetrics import *
+import pandas as pd
 
-signal = None
+signal = pd.DataFrame()
 error = 0
 all_features = []
 
