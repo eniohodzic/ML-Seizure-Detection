@@ -20,8 +20,7 @@ def formatData(features, signal):
 
     feats = []
     labs = []
-
-    print('Formating features')
+    print("signal formatted")
     return feats, labs
 
 
@@ -34,24 +33,23 @@ def splitData(X, y):
     Output: arrays of training and testing data
     """
 
-    # X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2)
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2)
+    print("signal split")
 
-    print('Splitting data')
-    pass
-    # return X_train, X_test, y_train, y_test
+    return X_train, X_test, y_train, y_test
 
 
 def chooseModel():
     """
     Try and build different models to fit the data to. Evaluate each model with cross-validation to determine which model is best suited for EEG detection
 
-    Input: arrays of training data 
+    Input: arrays of training data
 
     Output: dictionary of model name as keys, and performance metrics as values
-    
-    """
 
-    print('Returning all models')
+    """
+    print("model chosen")
+
     return {}
 
 
@@ -64,7 +62,6 @@ def checkModel():
     Output: performance metrics on testing dataset, object model of choice
 
     """
+    print("Model checked ")
 
-    print('Selecting best model')
     return None
-
