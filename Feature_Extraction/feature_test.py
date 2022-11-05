@@ -18,7 +18,7 @@ for n in x:
     #if(all_features[n] != correct):
         #error += 1
         #print("error at feature %d", n)
-test_run = run_features(all_features)
+        test_run = run_features(all_features)
 #if test_run == incorrect:
     #error += 1
     #print(error running features)
