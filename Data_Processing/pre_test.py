@@ -1,4 +1,4 @@
-from .preprocessing import *
+from preprocessing import *
 import numpy as np
 import mne
 import matplotlib.pyplot as plt
@@ -20,4 +20,4 @@ removed_test = preprocessing_remove_channel(removed_test)
 #if(removed_test == false):
     #print(error code)
     #error +=1
-return 0
+print(error)

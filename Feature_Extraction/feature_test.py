@@ -1,6 +1,6 @@
-from .featureGroup1 import *
-from .featureGroup2 import *
-from .runFeatureMetrics import *
+from featureGroup1 import *
+from featureGroup2 import *
+from runFeatureMetrics import *
 
 signal = None
 error = 0
@@ -21,4 +21,4 @@ test_run = run_features(all_features)
 #if test_run == incorrect:
     #error += 1
     #print(error running features)
-return error
+print(error)
