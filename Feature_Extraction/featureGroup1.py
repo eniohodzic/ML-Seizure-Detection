@@ -3,8 +3,9 @@ Simple features only on time domain of signal
 """
 
 import pandas as pd
+import numpy as np
 
-def feature1A(signal: pd.DataFrame):
+def calc_ROC(signal: pd.DataFrame):
     """
     FeatureA (Example): first derivative ROC of EEG signal
 
@@ -13,26 +14,36 @@ def feature1A(signal: pd.DataFrame):
 
     Output: Feature in either numpy array or Pandas DataFrame
     """
-    print("feature1a retrieved")
 
-    return []
+    ROC_df = signal.diff(periods=1, axis=0)
+    ROC_df.iloc[:,1:] = ROC_df.iloc[:,1:].div(ROC_df.time, axis=0)
+    ROC_df.time = signal.time
 
-def feature1B(signal: pd.DataFrame):
+    return ROC_df
+
+def calc_2nd_deriv(signal: np.array):
     """
-    FeatureB (Example): local variance of EEG signal
+    FeatureB (Example): second derivative of signal 
 
     Input: Post-processed signal in Pandas DataFrame format
         Other constants dependent on the feature
 
     Output: Feature in either numpy array or Pandas DataFrame
     """
-    print("feature1b retrieved")
 
-    return []
+    sec_deriv_df = signal.diff(periods=1, axis=0).diff(periods=1, axis=0)
+    time_change = signal.diff(periods=1, axis=0).time
+    sec_deriv_df.iloc[:,1:] = sec_deriv_df.iloc[:,1:].div(time_change, axis=0)
+    sec_deriv_df.time = signal.time
 
-def feature1X(signal: pd.DataFrame):
+    return sec_deriv_df
+
+def local_STD(signal: np.array, window_size = 10):
     """
-    Continue adding features that correlate with pre-seizure indication
+    Provide rolling window standard deviation
     """
-    print("feature1x retrieved")
-    return []
+
+    STD_df = signal.rolling(window_size).std()
+    STD_df.time = signal.time
+
+    return STD_df
