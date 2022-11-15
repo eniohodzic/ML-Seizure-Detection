@@ -4,10 +4,19 @@ import mne
 import matplotlib.pyplot as plt
 import sklearn
 from sklearn.model_selection import train_test_split
+from sklearn.model_selection import cross_val_score
+from sklearn.model_selection import StratifiedKFold
+from sklearn.linear_model import LogisticRegression
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
+from sklearn.naive_bayes import GaussianNB
+from sklearn.svm import SVC
+from sklearn.metrics import accuracy_score
 
 
 
-def formatData(features, signal):
+def formatData(eegFeatures, signalData):
 
     """
     Format the features and signal data in such a way for proper model training
@@ -18,10 +27,10 @@ def formatData(features, signal):
 
     """
 
-    feats = []
-    labs = []
+    feature = signalData[:,:-2]
+    label = signalData[:,-1]
     print("signal formatted")
-    return feats, labs
+    return feature, label
 
 
 def splitData(X, y):
@@ -39,7 +48,7 @@ def splitData(X, y):
     return X_train, X_test, y_train, y_test
 
 
-def chooseModel(data_array):
+def chooseModel(X_train, X_test, y_train, y_test):
     """
     Try and build different models to fit the data to. Evaluate each model with cross-validation to determine which model is best suited for EEG detection
 
@@ -48,12 +57,34 @@ def chooseModel(data_array):
     Output: dictionary of model name as keys, and performance metrics as values
 
     """
-    print("model chosen")
+    models = []
+    models.append(('LR', LogisticRegression(solver='liblinear', multi_class='ovr')))
+    # models.append(('LDA', LinearDiscriminantAnalysis()))
+    models.append(('KNN', KNeighborsClassifier()))
+    # models.append(('CART', DecisionTreeClassifier()))
+    # models.append(('NB', GaussianNB()))
+    models.append(('SVM', SVC(gamma='auto')))
 
-    return {}
+    results = []
+    names = []
+    for name, model in models:
+        kfold = StratifiedKFold(n_splits=10, random_state=1, shuffle=True)
+        cv_results = cross_val_score(model, X_train, y_train, cv=kfold, scoring='accuracy')
+        results.append(cv_results)
+        names.append(name)
+        print('%s: %f (%f)' % (name, cv_results.mean(), cv_results.std()))
 
 
-def checkModel(data_array, chosen_model):
+    best_idx = np.argmax(results)
+    best_model = names[best_idx]
+    best_acc = results[best_idx]
+
+    print(f"Model chosen is {best_model} with an accuracy of {best_acc}")
+
+    return best_model
+
+
+def checkModel(X_train, X_test, y_train, y_test, chosen_model):
     """
     Test the chosen model's performance from chooseModel() in the testing data
 
@@ -62,6 +93,16 @@ def checkModel(data_array, chosen_model):
     Output: performance metrics on testing dataset, object model of choice
 
     """
-    print("Model checked ")
+    str_to_model = {'LR':LogisticRegression(solver='liblinear', multi_class='ovr'),
+                    'KNN':KNeighborsClassifier(),
+                    'SVM':SVC(gamma='auto')
+                    }
+    model = str_to_model[chosen_model]
+    model.fit(X_train, y_train)
+    predictions = model.predict(X_test)
+    acc_score = accuracy_score(y_test, predictions)
+
+    print(f'Score on testing dataset: {acc_score}')
+    print("Model checked")
 
     return None
