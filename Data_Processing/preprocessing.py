@@ -11,12 +11,13 @@ import mne
 # plt.close("all")
 
 # import the data sets
-def import_data():
-    sample_data_folder = mne.datasets.sample.data_path()
-    sample_data_raw_file = (sample_data_folder / 'MEG' / 'sample' /
-                        'sample_audvis_filt-0-40_raw.fif')
-    raw = mne.io.read_raw_fif(sample_data_raw_file)
-    print("raw data retrieved")
+def import_data(sample_data_raw_file):
+    # sample_data_folder = mne.datasets.sample.data_path()
+    # sample_data_raw_file = (sample_data_folder / 'MEG' / 'sample' /
+    #                    'sample_audvis_filt-0-40_raw.fif')
+    raw = mne.io.read_raw_edf(sample_data_raw_file) # reads in raw edf file
+    print("raw data retrieved meyoowww")
+    mne.viz.plot_raw(raw)
     return raw
 
     # sample_data_folder = mne.datasets.sample.data_path()

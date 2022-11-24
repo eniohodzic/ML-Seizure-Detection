@@ -14,13 +14,21 @@ from Data_Processing import *
 from ML_Model import *
 
 def main():
-
+# preprocessing
+    # we will have a method to go through a patients dataset instead of just one file
+    filename = "/Users/HemSem/Documents/GitHub/ML-Seizure-Detection/dataset/s003_2015_12_28/00000015_s003_t000.edf"
+    
+    # creates an empty variable for list data
     raw = [] # Placeholder
-    import_data()
+    # first import the raw edf data and plot visualization
+    raw = import_data(filename)
+    # filter the raw signal with preprocessing
     filtered_dataset = preprocessing_filter(raw)
+    # remove bad channels from EEG data using MNE automated algorithms 
     signal = preprocessing_remove_channel(filtered_dataset)
-
-    features = run_features(signal)
+  
+    # ML portion
+    features = run_features(signal) # processed, removed bad channels
 
     feats, labs = formatData(features, signal)
     splitData(feats, labs)
