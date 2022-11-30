@@ -15,7 +15,7 @@ filter_test = preprocessing_filter(raw_test)
 #if(filter_test == false):
     #print(error code)
     #error +=1
-removed_test = preprocessing_remove_channel(removed_test)
+removed_test = preprocessing_remove_channel(filter_test)
 #tests for if channels were removed
 #if(removed_test == false):
     #print(error code)
