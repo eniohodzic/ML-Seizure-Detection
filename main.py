@@ -26,7 +26,8 @@ def main():
     filtered_dataset = preprocessing_filter(raw)
     # remove bad channels from EEG data using MNE automated algorithms 
     signal = preprocessing_remove_channel(filtered_dataset)
-  
+    
+    
     # ML portion
     features = run_features(signal) # processed, removed bad channels
 
