@@ -3,6 +3,8 @@ More complicated features that perform transformations on signal
 """
 
 import pandas as pd
+import numpy as np
+import pywt
 
 def feature2A(signal: pd.DataFrame):
     """
@@ -26,8 +28,20 @@ def feature2B(signal: pd.DataFrame):
 
     Output: Feature in either numpy array or Pandas DataFrame
     """
-    print ("feature 2b retrieved")
-    return []
+    
+    cA = signal.copy()
+    cD = signal.copy()
+
+    cA.iloc[:,1:] = np.nan
+    cD.iloc[:,1:] = np.nan
+
+    cols = signal.columns[1:]
+    for col in cols:
+        (ca, cd) = pywt.dwt(signal[col], 'db1')
+        cA.loc[1::2, col] = ca
+        cD.loc[1::2, col] = cd
+
+    return [cA, cD]
 
 def feature2X(signal: pd.DataFrame):
     """
