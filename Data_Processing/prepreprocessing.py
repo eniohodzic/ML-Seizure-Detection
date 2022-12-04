@@ -23,7 +23,7 @@ def annotate_edf_file(signal):
     #     print("no Electrographic seizures found")
     # else:
     #     print("seizures found")
-    txt = open('9260969_20160217_eg.txt', 'r').read()
+    txt = open('23285901_20160926_eg.txt', 'r').read()
     x = re.compile("[.* qS,s]eizure[.,\s]*")
     x.findall(txt)
 

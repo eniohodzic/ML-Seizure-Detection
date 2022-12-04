@@ -1,0 +1,451 @@
+HISTORY:
+
+
+60 y.o. female who presents for with refractory focal epilepsy with seizures at age 2-12 with a period
+of no seizures until age 27
+
+
+
+
+Semiology
+
+Type 1: Funny feeling, not well described, less than 1min, no post ictal. Frequency is inconsistent,
+can go one week without event or it can happened 8-10x per day. This seizure type started in 1983,
+used to be an aura for Type 2.
+
+
+Type 2: Loses awareness without LOC, no convulsion. She may wander, stiffen, stare, speak without
+making sense, lasts several minutes, also minimal post ictal. Frequency is 1-2 per month, started in
+1983 as well.
+
+
+
+Type 3: GTC type, rare. Last was in December 2015.
+
+
+
+
+
+
+Current AEDs: Keppra 500mg AM/1000mg HS, Lamictal 200mg/150mg.
+
+Previous AEDs: Zarontin, Dilantin, Gabapentin, Depakote, Ganaxolone (study drug), other study drugs
+unknown
+
+
+
+
+
+Epilepsy Risk factors: forceps delivery
+
+EEG (7/5/16) Excess theta, disorganized
+
+EEG (2/27/15) Left temporal sharp waves
+
+
+
+
+MRI Brain (8/19/16) Findings suggestive of left anterior temporal lobe cortical dysplasia
+
+with possible associated hippocampal atrophy.
+
+
+
+Continuous video EEG is initiated for:  Recording of seizures for presurgical evaluation.
+
+
+
+Inpatient continuous EEG monitoring required due to one or more of the following reasons:
+
+- The patient is having medically uncontrolled seizures or clinical events, which poses a significant
+mortality and morbidity risk.  Continuous monitoring will aid in diagnosis and determining best
+treatment options.  If seizures are left untreated, there is a 10-20% annual morbidity and 2% annual
+mortality rate.
+
+
+
+- Continuous monitoring is required to capture a sufficient number of clinical events or seizures, while
+medication are reduced or provoked, which increases the risk of severe seizures and at risk of seizures
+causing injury or status epilepticus;
+
+
+- The EMU is set up to monitor and record EEGs during seizures and it includes nurses trained to
+provide first aid and patient safety during seizures;
+
+
+- The full hospital team must be present to deal with these medical emergency situations should they
+arise, including nurses to document patient's exam
+
+
+There have been 13 reported deaths during various video-EEG monitoring procedures, so this is not
+a "low risk" service
+
+
+
+CONDITIONS OF THE RECORDING:
+
+A routine 21 channel digital EEG was recorded at the onset of monitoring.  The patient then
+underwent continuous CCTV/EEG monitoring using a cable telemetry system.  Scalp electrodes were
+placed and secured with collodion according to the 10-20 international electrode system.
+Sphenoidal electrodes were not used in this case.  Impedances were measured and verified to be
+below 5 Kohms.  EEG activity was recorded referentially to vertex reference, digitized, and stored to
+computer hard drive.  Periods of interest were subsequently reformatted to the montage of interest
+and reviewed in detail.
+
+
+
+
+
+Staff supervision, patient-initiated event buttons and computerized algorithms allowed detection of
+epileptiform EEG activity and correlation with behavior.  For 24 hours each weekday (and 12-24
+hours on weekend) the patient was attended by an EEG technician.  A neurologist was available in
+person or on call 24 hours per day.  The patient was monitored via video 24 hours per day by a
+registered nurse with special training in seizure recognition and testing.  During times when a
+technician was not available, EEG recording, video recording, and computer analysis continued, and
+nursing performed seizure testing and electrode maintenance.
+
+
+
+
+
+
+
+The  spike and seizure detection computer program was used to screen the EEG in real time for
+electrographic seizures and interictal discharges.  Samples of EEG were recorded periodically.
+Detections were reviewed in detail by attending neurologist.  All events and detections, as well as
+selected samples, were stored to external hard drive media.
+
+
+
+
+
+MEDICATIONS:
+
+No current facility-administered medications for this visit.
+
+No current outpatient prescriptions on file.
+
+
+Facility-Administered Medications Ordered in Other Visits:
+
+calcium-vitamin D 500 mg(1,250mg) -200 unit per tablet 1 tablet
+
+lamoTRIgine (LAMICTAL) tablet 150 mg
+
+
+levETIRAcetam (KEPPRA) tablet 500 mg
+
+sodium chloride 0.9 % injection (flush) 10 mL
+
+LORazepam (ATIVAN) injection 2 mg
+
+
+enoxaparin (LOVENOX) injection 40 mg
+
+
+
+
+SEDATION: None
+
+
+DAY 1 (9/26/2016, 11:21AM - 9/27/2016, 08:00)
+
+
+
+EEG BACKGROUND:
+
+The waking background is characterized by the presence of a well organized symmetric mixture of
+alpha and beta frequencies, with a symmetric and reactive 10 Hertz posterior dominant rhythm
+(PDR). The normal anterior-to-posterior gradient of frequency and amplitude is present.
+
+
+
+
+During drowsiness, slow rolling eye movements, attenuation and fragmentation of the posterior
+dominant rhythm, and diffuse background slowing are seen.
+
+
+
+Sleep is characterized by normal sleep transients, with synchronous and symmetric vertex waves,
+sleep spindles and K-complexes. Slow wave sleep was not captured.
+
+
+
+Intermittent polymorphic delta activity is present in the bilateral temporal regions during wakefulness,
+increasing during drowsiness.
+
+
+
+EPILEPTIFORM ACTIVITY:
+
+
+Frequent sharp waves are seen at F8/T4, T4 more than F7/T3, T3 mainly in sleep.
+
+
+
+
+
+OTHER PAROXYSMAL ACTIVITY (NON-EPILEPTIFORM):
+
+
+None
+
+
+
+ACTIVATION PROCEDURES: Hyperventilation and photic stimulation are not performed.
+
+
+EVENTS:
+
+Seizure #1 CPS 09/26/2016 at 03:02PM Duration: 1 minute 8 seconds
+
+
+EEG: About 10 seconds after clinical onset there is a F8/T4 delta then theta discharge that continues
+to evolve and remains over the right temporal region with minimal spread to the left at the end.
+
+
+Clinical: The patient pushes the button. Then appears to look around with left hand automatisms and
+mouth movements. Testing reveal difficulty answering verbal questions but can answer one word
+answers.
+
+
+Right after the electrical seizure ends she follows commands.
+
+HR: before:  72 bpm  during: 108bpm    After: 90bpm
+
+
+
+SEIZURE #2 CPS: 09/26/2016 at 05:55PM Duration: 21 seconds
+
+EEG: 10-12 seconds after clinical onset there is a beta frequency discharge maximal over the F8/T4
+region that slows down to theta and suddenly stops. The discharge remains over the right temporal
+region
+
+
+
+Clinical: Patients looking for the push button but appears confused looking around. As the seizure
+ends she finds the push button. Not tested.
+
+HR: before: 60bpm during: 96bpm after: 66bpm
+
+
+
+SEIZURE #3 CPS: 09/26/2016 at 06:45PM Duration: 17 seconds
+
+EEG: 10-12 seconds after clinical onset there is a low amplitude theta frequency discharge maximal
+over the F8/T4 region that slows down to delta and suddenly stops. The discharge remains over the
+right temporal region.
+
+
+
+Clinical: Patients looking for the push button but doesn't press it until after the electrical seizure ends.
+Not tested.
+
+HR: Unchanged
+
+
+
+
+SEIZURE #4 CPS: 09/26/2016 at 07:26PM Duration: 30 seconds
+
+
+EEG: There is a low amplitude delta frequency discharge maximal over the F8/T4 region that
+increases increases in frequency to fast theta then slows down to delta and suddenly stops.The
+discharge remains over the right temporal region
+
+
+
+Clinical: Patients looking for the push button but appears confused looking around. After the
+electrical seizure ends she finds the push button. Not tested.
+
+
+
+
+HR: Unchanged
+
+
+
+SEIZURE #5 CPS: 09/26/2016 at 08:04PM Duration: 1 minute 16 seconds
+
+EEG: There is a low amplitude delta frequency discharge maximal over the F8/T4 region that
+increases increases in frequency to fast theta then slows down to delta and suddenly stops.The
+discharge remains over the right temporal region
+
+
+
+
+Clinical: about 20 seconds after electrical onset (differs to previous seizures) pt presses the push
+button and lays in bed, exhibits minimal automatism with the left hand and stares. She is asked
+questions and appears to answer to of them.
+
+
+
+HR: before: 60bpm during: 108bpm after: 66bpm
+
+
+
+
+DAY 1 IMPRESSION & CLINICAL CORRELATION:
+
+1. Five CPS seizures arising from the right temporal region.
+
+
+2. Intermittent focal slowing in the bilateral temporal regions.
+
+
+The seizures are consistent with localization related epilepsy arising from the right temporal region.
+The focal slow waves are indicative of focal cerebral dysfunction, which is etiologically non-specific.
+
+----------------------------------------------------------
+
+DAY 2 (9/27/2016, 08:00AM - 9/28/2016, 11:00AM)
+
+
+
+EEG BACKGROUND:
+
+The waking background is characterized by the presence of a well organized symmetric mixture of
+alpha and beta frequencies, with a symmetric and reactive 10 Hertz posterior dominant rhythm
+(PDR). The normal anterior-to-posterior gradient of frequency and amplitude is present.
+
+
+
+
+During drowsiness, slow rolling eye movements, attenuation and fragmentation of the posterior
+dominant rhythm, and diffuse background slowing are seen.
+
+
+
+Sleep is characterized by normal sleep transients, with synchronous and symmetric vertex waves,
+sleep spindles and K-complexes. Slow wave sleep was not captured.
+
+
+
+Intermittent polymorphic delta activity is present in the bilateral temporal regions during wakefulness,
+increasing during drowsiness.
+
+
+
+EPILEPTIFORM ACTIVITY:
+
+
+
+
+Frequent sharp waves are seen at F8/T4, T4 more than F7/T3, T3 mainly in sleep.
+
+
+
+OTHER PAROXYSMAL ACTIVITY (NON-EPILEPTIFORM):
+
+None
+
+
+
+ACTIVATION PROCEDURES: Hyperventilation and photic stimulation are not performed.
+
+
+EVENTS:
+
+
+Seizure #6 CPS 09/27/2016 at 09:26A M Duration:
+
+EEG: There is a F7/T3 delta then theta discharge that continues to evolve and remains over the left
+temporal region then stops after 25 seconds. The background then appears mild diffuse slow. Then
+about 35 seconds later a nice high amplitude F7/T3 sharp theta discharge is seen which increases in
+amplitude and slows down in frequency while spreading through the temporal region with some
+spread to the right.
+
+
+
+
+
+Clinical: About 6 seconds after electrical onset the patient pushes the button. Then appears to stay
+calm in bed. Not tested for the first 25 seconds. Later the technician comes in and tests her and she
+remains unresponsive. Suddenly  She start having right hand automatism and lip smacking, She
+grabs the technicians hand and continues to have automatisms, her eyes turn to the left and at one
+point her head turns to the left. She does not follow commands during the event.
+
+
+
+HR: before:  90 during 108 after 90
+
+
+
+
+
+DAY 2 IMPRESSION & CLINICAL CORRELATION:
+
+1. One CPS seizures arising from the left temporal region.
+
+
+2. Intermittent focal slowing in the bilateral temporal regions.
+
+
+The seizures are consistent with localization related epilepsy arising from the left  temporal region.
+The focal slow waves are indicative of focal cerebral dysfunction, which is etiologically non-specific.
+
+
+----------------------------------------------------------
+
+
+INDUCTION PROCEDURES:
+
+None
+
+
+SUMMARY OF VIDEO EEG FINDINGS:
+
+
+Interictal Findings:
+
+1. Frequent sharp waves are seen at F8/T4, T4 more than F7/T3, T3 mainly in sleep.
+
+
+
+2. Intermittent focal slowing in the bilateral temporal regions.
+
+
+
+Ictal Findings:
+
+The patient had 6 clinical events while hooked up to continuous video EEG monitoring in the
+epilepsy monitoring unit.
+
+
+Five CPS seizures arising from the right temporal region.
+
+One CPS seizures arising from the left temporal region.
+
+
+
+SEIZURE DIAGNOSIS:
+
+1. Complex partial seizures
+
+
+
+EPILEPSY DIAGNOSIS:
+
+1. Localization related epilepsy arising from the bitemporal regions.
+
+
+
+CONCLUSION:
+
+was admitted to the epilepsy monitoring unit for 2 days with continuous video EEG.
+The interictal EEG is characterized by frequent sharp waves are seen at right temporal more than left
+temporal region mainly in sleep as well as intermittent focal slowing in the bilateral temporal
+regions.  Frequent epileptiform discharges indicate a potentially epileptogenic focus in that region.
+
+
+
+Focal slowing in the bitemporal region indicates a non-specific focal dysfunction in that region. No
+medication changes were made during the hospitalization.
+
+
+After this data is acquired she will be presented at surgical conference to discuss the possibility of
+intracranial monitoring / electrocorticography as a next step in her surgical evaluation.
+
+
+
+Patient is follow-up at the Temple Epilepsy Center as an outpatie
