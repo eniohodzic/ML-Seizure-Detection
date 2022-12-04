@@ -23,10 +23,10 @@ def main():
     features = run_features(signal)
 
     feats, labs = formatData(features, signal)
-    splitData(feats, labs)
+    X_train, X_test, y_train, y_test = splitData(feats, labs)
 
-    models = chooseModel()
-    checkModel()
+    model = chooseModel(X_train, X_test, y_train, y_test)
+    checkModel(X_train, X_test, y_train, y_test, model)
 
     pass
 

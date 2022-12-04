@@ -14,21 +14,36 @@ from sklearn.naive_bayes import GaussianNB
 from sklearn.svm import SVC
 from sklearn.metrics import accuracy_score
 
+def reformat(featureData):
+    """
+    Reformat the 3D data for one patient (time x channels x features) to a 2D time x channelFeatures
 
+    Input: 3D data for one patient (time x channels x features)
+    
+    Output: 2D time x channelFeatures
 
-def formatData(eegFeatures, signalData):
+    """
+
+    return featureData.reshape(featureData.shape[2], 0, -1)
+
+def formatData(allFeatureData):
 
     """
     Format the features and signal data in such a way for proper model training
 
-    Input: features and signal dataframe and/or list
+    Input: 4D features data with the fourth dimension being each patient
 
-    Output: a two-dimensional array with appropriate features and label(s)
+    Output: a two-dimensional array concatenated row-wise for each patient
 
     """
+    patientCount = allFeatureData.shape[3]
+    final = reformat(allFeatureData[:,:,:,0]) # initiate the array 
+    for i in patientCount[1:]: # start from second patient because first patient has been run above
+        tmp = reformat(allFeatureData[:,:,:,i]) # the conversion from 3D to 2D
+        final.append(final, tmp, axis = 0) # stack (row-wise) for each patient
 
-    feature = signalData[:,:-2]
-    label = signalData[:,-1]
+    feature = final[:,:-2]
+    label = final[:,-1]
     print("signal formatted")
     return feature, label
 
