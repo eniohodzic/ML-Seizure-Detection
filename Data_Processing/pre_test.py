@@ -20,4 +20,9 @@ removed_test = preprocessing_remove_channel(filter_test)
 #if(removed_test == false):
     #print(error code)
     #error +=1
+if isinstance(removed_test, pd.DataFrame):
+    if 'EEG C3-REF' in removed_test:
+        error += 1
+else: 
+    errpr += 1
 print(error)
