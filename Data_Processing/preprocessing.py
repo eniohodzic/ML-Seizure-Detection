@@ -63,3 +63,5 @@ def preprocessing_remove_channel(filtered_datasets):
     # ica.exclude = [1, 2]  # exclude some of the traces
     # ica.plot_properties(raw, picks=ica.exclude)
     #return remaining_channels
+def windowed_var(window, df):
+    return df.window(window).var()
