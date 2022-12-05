@@ -64,4 +64,6 @@ def preprocessing_remove_channel(filtered_datasets):
     # ica.plot_properties(raw, picks=ica.exclude)
     #return remaining_channels
 def windowed_var(window, df):
-    return df.window(window).var()
+    return df.rolling(window).var()
+def window_remove_nan(df):
+    return df.dropna()
