@@ -11,6 +11,7 @@ import mne
 import numpy as np
 import numba
 import pandas as pd
+from numpy.fft import fft, ifft
 # plt.close("all")
 #need version 1.20.0 of numpy and ver 0.48 of numba to run
 
@@ -41,7 +42,7 @@ def preprocessing_filter(raw):
         #scan through for bad channels under certain conditions TBD
         #to_drop.append(y)
     to_drop.append('EEG C3-REF') #test value
-    print(to_drop)
+    #print(to_drop)
     raw.drop_channels(to_drop)
     raw.notch_filter(np.arange(60, 100, 60))
     raw.plot()
@@ -64,6 +65,45 @@ def preprocessing_remove_channel(filtered_datasets):
     # ica.plot_properties(raw, picks=ica.exclude)
     #return remaining_channels
 def windowed_var(window, df):
-    return df.rolling(window).var()
+    vr = df.rolling(window).var()
+    vr["time"] = df["time"]
+    return vr
+
+
 def window_remove_nan(df):
     return df.dropna()
+
+
+def windowed_avg(window, df):
+    mn = df.rolling(window).mean()
+    mn["time"] = df["time"]
+    return
+
+def zerocross(df):
+    #assumtion" all zeros are crossing due to varaiablilty of noise
+    zerocross = lambda x: ((abs(np.sum(x)) != np.sum(abs(x))))|(np.all(x)==False)
+    zc = df.rolling(2).apply(zerocross)
+    zc["time"] = df["time"]
+    return zc
+
+def windowed_fft_avg(window, df, weight_type = 0, weight = 2):
+    scaler = np.arange(window) + 1
+    if weight_type == 1:
+        scaler = np.logspace(1,window,num = window, base = weight)
+    fourier = lambda x: abs(np.mean(np.multiply(fft(x),scaler)))
+    ft = df.rolling(52).apply(fourier)
+    ft["time"] = df["time"]
+    return ft
+
+
+def window_fft_3hz_est(sampling_frq, df):
+    window = 1//sampling_frq
+    fourier = lambda x: abs((fft(x)[4]))
+    ft = df.rolling(window).apply(fourier)
+    ft["time"] = df["time"]
+    return ft
+
+def detect_freq(df):
+    for i in np.arange(10):
+        timescale += df["time"].iloc[i+1] - df["time"].iloc[i]
+    return freq = 10//timescale
