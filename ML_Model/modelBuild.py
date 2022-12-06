@@ -24,7 +24,7 @@ def reformat(featureData):
 
     """
 
-    return featureData.reshape(featureData.shape[2], 0, -1)
+    return featureData.reshape(featureData.shape[0], -1)
 
 def formatData(allFeatureData):
 
