@@ -75,7 +75,8 @@ def window_remove_nan(df):
 
 
 def windowed_avg(window, df):
-    mn = df.rolling(window).mean()
+    absmean = lambda x: np.mean(abs(x))
+    mn = df.rolling(window).apply(absmean)
     mn["time"] = df["time"]
     return
 
