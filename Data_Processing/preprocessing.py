@@ -20,7 +20,7 @@ def import_data():
     #sample_data_folder = '~/Data_Processing'
     #sample_data_raw_file = (sample_data_folder / 'MEG' / 'sample' /
     #                    'sample_audvis_filt-0-40_raw.fif')
-    raw = mne.io.read_raw_edf('00000124_s008_t028.edf', preload = True)
+    raw = mne.io.read_raw_edf('00000086_s004_t003.edf', preload = True)
     print("raw data retrieved")
     return raw
 
@@ -41,15 +41,16 @@ def preprocessing_filter(raw):
     #for(i in range(x)):
         #scan through for bad channels under certain conditions TBD
         #to_drop.append(y)
-    to_drop.append('EEG C3-REF') #test value
+    #to_drop.append('EEG C3-REF') #test value
     #print(to_drop)
-    raw.drop_channels(to_drop)
+    #raw.drop_channels(to_drop)
     raw.notch_filter(np.arange(60, 100, 60))
     raw.plot()
     return raw
     #return filtered_datasets
 
-
+def sampling_rt(raw):
+    return raw.info['sfreq']
 def preprocessing_remove_channel(filtered_datasets):
     # here, we will get rid of the bad channels
     # this includes channels that have
@@ -78,7 +79,7 @@ def windowed_avg(window, df):
     absmean = lambda x: np.mean(abs(x))
     mn = df.rolling(window).apply(absmean)
     mn["time"] = df["time"]
-    return
+    return mn
 
 def zerocross(df):
     #assumtion" all zeros are crossing due to varaiablilty of noise
@@ -89,22 +90,27 @@ def zerocross(df):
 
 def windowed_fft_avg(window, df, weight_type = 0, weight = 2):
     scaler = np.arange(window) + 1
+    n = window/2
     if weight_type == 1:
         scaler = np.logspace(1,window,num = window, base = weight)
-    fourier = lambda x: abs(np.mean(np.multiply(fft(x),scaler)))
-    ft = df.rolling(52).apply(fourier)
+        for i in np.arange(len(scaler)):
+            if i > 128:
+                scaler[i] = 0
+
+    fourier = lambda x: abs(np.mean((np.multiply(fft(x),scaler))))
+    ft = df.rolling(window).apply(fourier)
     ft["time"] = df["time"]
     return ft
 
 
 def window_fft_3hz_est(sampling_frq, df):
-    window = 1//sampling_frq
+    window = sampling_frq
     fourier = lambda x: abs((fft(x)[4]))
     ft = df.rolling(window).apply(fourier)
     ft["time"] = df["time"]
     return ft
 
-def detect_freq(df):
-    for i in np.arange(10):
-        timescale += df["time"].iloc[i+1] - df["time"].iloc[i]
-    return freq = 10//timescale
+#def detect_freq(df):
+    #for i in np.arange(10):
+    #    timescale += df["time"].iloc[i+1] - df["time"].iloc[i]
+    #return freq = 10//timescale
