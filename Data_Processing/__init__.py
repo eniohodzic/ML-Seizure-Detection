@@ -32,6 +32,7 @@ print(re)
 #2 = 3 hz isolated of 290-3050
 #3 = zerocrossings of 290-305
 #4 windowed average of 290-305
+#5 windowed variance
 to_print = 5
 if to_print == 0:
     a = 300 * 256
